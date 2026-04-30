@@ -1,0 +1,30 @@
+name: Build LaTeX PDF
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "article/**"
+      - ".github/workflows/build-latex.yml"
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: article
+          args: -pdf -interaction=nonstopmode -halt-on-error
+
+      - name: Upload compiled PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: prd-article-pdf
+          path: article/build/main.pdf
