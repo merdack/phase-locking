@@ -1,5 +1,6 @@
 /build/*
 !/build/.gitkeep
+!/build/main.pdf
 *.aux
 *.bbl
 *.blg
@@ -7,5 +8,4 @@
 *.fdb_latexmk
 *.log
 *.out
-*.pdf
 *.synctex.gz

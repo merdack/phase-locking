@@ -28,6 +28,9 @@ make
 The default target uses `latexmk` and writes generated files to `build/`. The compiled PDF is `build/main.pdf`.
 Install a TeX distribution with REVTeX, `latexmk`, BibTeX, and the APS bibliography style before building locally.
 
+On GitHub, pull requests to `dev` or `main` build the PDF and upload it as a workflow artifact.
+Pushes to `dev` or `main` also commit the generated `article/build/main.pdf` back to the branch.
+
 To remove generated files:
 
 ```sh
