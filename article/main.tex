@@ -1,0 +1,60 @@
+\documentclass[
+  aps,
+  prd,
+  reprint,
+  superscriptaddress,
+  nofootinbib,
+  longbibliography
+]{revtex4-2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{hyperref}
+
+\graphicspath{{figures/}}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\begin{document}
+
+\title{Title of the Physics Article}
+
+\author{First Author}
+\email{first.author@example.edu}
+\affiliation{Department of Physics, Institution Name, City, Country}
+
+\author{Second Author}
+\affiliation{Department of Physics, Institution Name, City, Country}
+
+\date{\today}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/theory}
+\input{sections/methods}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+\input{sections/acknowledgments}
+
+\appendix
+\input{appendices/derivations}
+\input{appendices/numerics}
+
+\bibliographystyle{apsrev4-2}
+\bibliography{bibliography/references}
+
+\end{document}
